@@ -7,46 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C075A541F8DFFF3001D482B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C075A531F8DFEFC001D482B /* GoogleService-Info.plist */; };
 		2C18CE1E1F841739009C6AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CE1D1F841739009C6AF4 /* AppDelegate.swift */; };
-		2C18CE201F841739009C6AF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CE1F1F841739009C6AF4 /* ViewController.swift */; };
 		2C18CE231F841739009C6AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C18CE211F841739009C6AF4 /* Main.storyboard */; };
 		2C18CE251F841739009C6AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C18CE241F841739009C6AF4 /* Assets.xcassets */; };
 		2C18CE281F841739009C6AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C18CE261F841739009C6AF4 /* LaunchScreen.storyboard */; };
-		2C18CE331F841739009C6AF4 /* Wanted_MonsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CE321F841739009C6AF4 /* Wanted_MonsterTests.swift */; };
-		2C18CE3E1F841739009C6AF4 /* Wanted_MonsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CE3D1F841739009C6AF4 /* Wanted_MonsterUITests.swift */; };
+		2C18CE4C1F84193F009C6AF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CE4B1F84193F009C6AF4 /* HomeViewController.swift */; };
+		2C18CE4E1F841E25009C6AF4 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CE4D1F841E25009C6AF4 /* HomeCell.swift */; };
+		2C18CE501F842042009C6AF4 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CE4F1F842042009C6AF4 /* Monster.swift */; };
+		2C6D1A711F8B60BC00477EAE /* detailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D1A701F8B60BC00477EAE /* detailsViewController.swift */; };
+		2C95BA9F1F8B7B9B0075CAAF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C95BA9E1F8B7B9B0075CAAF /* AddViewController.swift */; };
+		F51C230F0B0E2C084B4499F2 /* Pods_Wanted_Monster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C29BF807FBDC70181D90F3F /* Pods_Wanted_Monster.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2C18CE2F1F841739009C6AF4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C18CE121F841739009C6AF4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C18CE191F841739009C6AF4;
-			remoteInfo = "Wanted Monster";
-		};
-		2C18CE3A1F841739009C6AF4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C18CE121F841739009C6AF4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C18CE191F841739009C6AF4;
-			remoteInfo = "Wanted Monster";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		2C075A531F8DFEFC001D482B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C18CE1A1F841739009C6AF4 /* Wanted Monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wanted Monster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C18CE1D1F841739009C6AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C18CE1F1F841739009C6AF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C18CE221F841739009C6AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C18CE241F841739009C6AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C18CE271F841739009C6AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C18CE291F841739009C6AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C18CE2E1F841739009C6AF4 /* Wanted MonsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wanted MonsterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C18CE321F841739009C6AF4 /* Wanted_MonsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wanted_MonsterTests.swift; sourceTree = "<group>"; };
-		2C18CE341F841739009C6AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C18CE391F841739009C6AF4 /* Wanted MonsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wanted MonsterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C18CE3D1F841739009C6AF4 /* Wanted_MonsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wanted_MonsterUITests.swift; sourceTree = "<group>"; };
-		2C18CE3F1F841739009C6AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C18CE4B1F84193F009C6AF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2C18CE4D1F841E25009C6AF4 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		2C18CE4F1F842042009C6AF4 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		2C6D1A701F8B60BC00477EAE /* detailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsViewController.swift; sourceTree = "<group>"; };
+		2C95BA9E1F8B7B9B0075CAAF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		3C29BF807FBDC70181D90F3F /* Pods_Wanted_Monster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wanted_Monster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB5BCE29C1E0E350FC81465 /* Pods-Wanted Monster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wanted Monster.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wanted Monster/Pods-Wanted Monster.release.xcconfig"; sourceTree = "<group>"; };
+		CB89E130EA347F1A6CF7FEF8 /* Pods-Wanted Monster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wanted Monster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wanted Monster/Pods-Wanted Monster.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,20 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C18CE2B1F841739009C6AF4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C18CE361F841739009C6AF4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				F51C230F0B0E2C084B4499F2 /* Pods_Wanted_Monster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				2C18CE1C1F841739009C6AF4 /* Wanted Monster */,
-				2C18CE311F841739009C6AF4 /* Wanted MonsterTests */,
-				2C18CE3C1F841739009C6AF4 /* Wanted MonsterUITests */,
 				2C18CE1B1F841739009C6AF4 /* Products */,
+				574788644DC23D7A6C2F1C34 /* Pods */,
+				ED786B86E2F112721B6F40F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,8 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				2C18CE1A1F841739009C6AF4 /* Wanted Monster.app */,
-				2C18CE2E1F841739009C6AF4 /* Wanted MonsterTests.xctest */,
-				2C18CE391F841739009C6AF4 /* Wanted MonsterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,32 +71,36 @@
 		2C18CE1C1F841739009C6AF4 /* Wanted Monster */ = {
 			isa = PBXGroup;
 			children = (
+				2C075A531F8DFEFC001D482B /* GoogleService-Info.plist */,
+				2C18CE4F1F842042009C6AF4 /* Monster.swift */,
 				2C18CE1D1F841739009C6AF4 /* AppDelegate.swift */,
-				2C18CE1F1F841739009C6AF4 /* ViewController.swift */,
 				2C18CE211F841739009C6AF4 /* Main.storyboard */,
 				2C18CE241F841739009C6AF4 /* Assets.xcassets */,
 				2C18CE261F841739009C6AF4 /* LaunchScreen.storyboard */,
 				2C18CE291F841739009C6AF4 /* Info.plist */,
+				2C18CE4B1F84193F009C6AF4 /* HomeViewController.swift */,
+				2C18CE4D1F841E25009C6AF4 /* HomeCell.swift */,
+				2C6D1A701F8B60BC00477EAE /* detailsViewController.swift */,
+				2C95BA9E1F8B7B9B0075CAAF /* AddViewController.swift */,
 			);
 			path = "Wanted Monster";
 			sourceTree = "<group>";
 		};
-		2C18CE311F841739009C6AF4 /* Wanted MonsterTests */ = {
+		574788644DC23D7A6C2F1C34 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2C18CE321F841739009C6AF4 /* Wanted_MonsterTests.swift */,
-				2C18CE341F841739009C6AF4 /* Info.plist */,
+				CB89E130EA347F1A6CF7FEF8 /* Pods-Wanted Monster.debug.xcconfig */,
+				6EB5BCE29C1E0E350FC81465 /* Pods-Wanted Monster.release.xcconfig */,
 			);
-			path = "Wanted MonsterTests";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		2C18CE3C1F841739009C6AF4 /* Wanted MonsterUITests */ = {
+		ED786B86E2F112721B6F40F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2C18CE3D1F841739009C6AF4 /* Wanted_MonsterUITests.swift */,
-				2C18CE3F1F841739009C6AF4 /* Info.plist */,
+				3C29BF807FBDC70181D90F3F /* Pods_Wanted_Monster.framework */,
 			);
-			path = "Wanted MonsterUITests";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C18CE421F84173A009C6AF4 /* Build configuration list for PBXNativeTarget "Wanted Monster" */;
 			buildPhases = (
+				810EA392136E4F29D839972A /* [CP] Check Pods Manifest.lock */,
 				2C18CE161F841739009C6AF4 /* Sources */,
 				2C18CE171F841739009C6AF4 /* Frameworks */,
 				2C18CE181F841739009C6AF4 /* Resources */,
+				E6C56A4724D3305221DD1CCD /* [CP] Embed Pods Frameworks */,
+				B87DF1C90D8E59A5F2AF339F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,42 +125,6 @@
 			productName = "Wanted Monster";
 			productReference = 2C18CE1A1F841739009C6AF4 /* Wanted Monster.app */;
 			productType = "com.apple.product-type.application";
-		};
-		2C18CE2D1F841739009C6AF4 /* Wanted MonsterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C18CE451F84173A009C6AF4 /* Build configuration list for PBXNativeTarget "Wanted MonsterTests" */;
-			buildPhases = (
-				2C18CE2A1F841739009C6AF4 /* Sources */,
-				2C18CE2B1F841739009C6AF4 /* Frameworks */,
-				2C18CE2C1F841739009C6AF4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2C18CE301F841739009C6AF4 /* PBXTargetDependency */,
-			);
-			name = "Wanted MonsterTests";
-			productName = "Wanted MonsterTests";
-			productReference = 2C18CE2E1F841739009C6AF4 /* Wanted MonsterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2C18CE381F841739009C6AF4 /* Wanted MonsterUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C18CE481F84173A009C6AF4 /* Build configuration list for PBXNativeTarget "Wanted MonsterUITests" */;
-			buildPhases = (
-				2C18CE351F841739009C6AF4 /* Sources */,
-				2C18CE361F841739009C6AF4 /* Frameworks */,
-				2C18CE371F841739009C6AF4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2C18CE3B1F841739009C6AF4 /* PBXTargetDependency */,
-			);
-			name = "Wanted MonsterUITests";
-			productName = "Wanted MonsterUITests";
-			productReference = 2C18CE391F841739009C6AF4 /* Wanted MonsterUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -194,16 +139,6 @@
 					2C18CE191F841739009C6AF4 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
-					};
-					2C18CE2D1F841739009C6AF4 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 2C18CE191F841739009C6AF4;
-					};
-					2C18CE381F841739009C6AF4 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 2C18CE191F841739009C6AF4;
 					};
 				};
 			};
@@ -221,8 +156,6 @@
 			projectRoot = "";
 			targets = (
 				2C18CE191F841739009C6AF4 /* Wanted Monster */,
-				2C18CE2D1F841739009C6AF4 /* Wanted MonsterTests */,
-				2C18CE381F841739009C6AF4 /* Wanted MonsterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,67 +166,87 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C18CE281F841739009C6AF4 /* LaunchScreen.storyboard in Resources */,
+				2C075A541F8DFFF3001D482B /* GoogleService-Info.plist in Resources */,
 				2C18CE251F841739009C6AF4 /* Assets.xcassets in Resources */,
 				2C18CE231F841739009C6AF4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C18CE2C1F841739009C6AF4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C18CE371F841739009C6AF4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		810EA392136E4F29D839972A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wanted Monster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B87DF1C90D8E59A5F2AF339F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wanted Monster/Pods-Wanted Monster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6C56A4724D3305221DD1CCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Wanted Monster/Pods-Wanted Monster-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wanted Monster/Pods-Wanted Monster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C18CE161F841739009C6AF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C18CE201F841739009C6AF4 /* ViewController.swift in Sources */,
+				2C6D1A711F8B60BC00477EAE /* detailsViewController.swift in Sources */,
+				2C18CE501F842042009C6AF4 /* Monster.swift in Sources */,
+				2C95BA9F1F8B7B9B0075CAAF /* AddViewController.swift in Sources */,
 				2C18CE1E1F841739009C6AF4 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C18CE2A1F841739009C6AF4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C18CE331F841739009C6AF4 /* Wanted_MonsterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C18CE351F841739009C6AF4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C18CE3E1F841739009C6AF4 /* Wanted_MonsterUITests.swift in Sources */,
+				2C18CE4E1F841E25009C6AF4 /* HomeCell.swift in Sources */,
+				2C18CE4C1F84193F009C6AF4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2C18CE301F841739009C6AF4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C18CE191F841739009C6AF4 /* Wanted Monster */;
-			targetProxy = 2C18CE2F1F841739009C6AF4 /* PBXContainerItemProxy */;
-		};
-		2C18CE3B1F841739009C6AF4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C18CE191F841739009C6AF4 /* Wanted Monster */;
-			targetProxy = 2C18CE3A1F841739009C6AF4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2C18CE211F841739009C6AF4 /* Main.storyboard */ = {
@@ -424,13 +377,17 @@
 		};
 		2C18CE431F84173A009C6AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB89E130EA347F1A6CF7FEF8 /* Pods-Wanted Monster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4MM84N22Q;
 				INFOPLIST_FILE = "Wanted Monster/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MR.Wanted-Monster";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,77 +395,19 @@
 		};
 		2C18CE441F84173A009C6AF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EB5BCE29C1E0E350FC81465 /* Pods-Wanted Monster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4MM84N22Q;
 				INFOPLIST_FILE = "Wanted Monster/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MR.Wanted-Monster";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		2C18CE461F84173A009C6AF4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Wanted MonsterTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "MR.Wanted-MonsterTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wanted Monster.app/Wanted Monster";
-			};
-			name = Debug;
-		};
-		2C18CE471F84173A009C6AF4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Wanted MonsterTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "MR.Wanted-MonsterTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wanted Monster.app/Wanted Monster";
-			};
-			name = Release;
-		};
-		2C18CE491F84173A009C6AF4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Wanted MonsterUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "MR.Wanted-MonsterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Wanted Monster";
-			};
-			name = Debug;
-		};
-		2C18CE4A1F84173A009C6AF4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Wanted MonsterUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "MR.Wanted-MonsterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Wanted Monster";
 			};
 			name = Release;
 		};
@@ -529,24 +428,6 @@
 			buildConfigurations = (
 				2C18CE431F84173A009C6AF4 /* Debug */,
 				2C18CE441F84173A009C6AF4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2C18CE451F84173A009C6AF4 /* Build configuration list for PBXNativeTarget "Wanted MonsterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C18CE461F84173A009C6AF4 /* Debug */,
-				2C18CE471F84173A009C6AF4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2C18CE481F84173A009C6AF4 /* Build configuration list for PBXNativeTarget "Wanted MonsterUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C18CE491F84173A009C6AF4 /* Debug */,
-				2C18CE4A1F84173A009C6AF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
