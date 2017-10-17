@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>94814057184-9tivapq91gas3e1vs5cs18o8n1jt1b5q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.94814057184-9tivapq91gas3e1vs5cs18o8n1jt1b5q</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCFBnyp9OCQ469d-QYgZ3zG6q94nHNfIyQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>94814057184</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>MR.Wanted-Monster</string>
+	<key>PROJECT_ID</key>
+	<string>wanted-monster</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wanted-monster.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:94814057184:ios:1f4eec827650c5bf</string>
+	<key>DATABASE_URL</key>
+	<string>https://wanted-monster.firebaseio.com</string>
+</dict>
+</plist>

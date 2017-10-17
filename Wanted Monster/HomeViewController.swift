@@ -7,26 +7,55 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var homeTableView: UITableView!
     
+    var ref:DatabaseReference?
+    var databaseHandler:DatabaseHandle?
     var monsters:[Monster]=[]
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        monsters=createArray()
+        //monsters=createArray()
         
         homeTableView.delegate=self
         homeTableView.dataSource=self
         
+        //Set the firebase reference
+        ref=Database.database().reference()
+        //Retrieve the monsters and listen for change
+        databaseHandler=ref?.child("monster").observe(.childAdded, with: { (snapshot) in
+            if let value = snapshot.value
+            {
+                let response = true
+                let json = JSON(value)
+                print(json)
+                guard let userFistName = json["Firstname"].string, let userLastName = json["Lastname"].string, let userBirthdate = json["Birthdate"].string else {return}
+                self.firstName = userFistName
+                self.lastName = userLastName
+                self.bithDate = userBirthdate
+                let userLocation = json["Location"]
+                self.location = FireBaseManager.getLocationFromJson(userLocation: userLocation)
+                let userGroup = json["Group"]
+                self.group = FireBaseManager.getGroupFromJson(userGroup: userGroup)
+                let userAdress = json["Adress"]
+                self.adress = FireBaseManager.getAdressFromJson(userAdress: userAdress)
+                DispatchQueue.main.async {
+                    handler(response)
+                }
+            }
+        })
 
     }
 
     func createArray() ->[Monster]{
         var tempMonster:[Monster]=[]
+        
         
         let monster1=Monster(typeOfMonster: .chair, pictureOfMonster: #imageLiteral(resourceName: "genaude"))
         let monster2=Monster(typeOfMonster: .couch, pictureOfMonster: #imageLiteral(resourceName: "cookieMonster"))

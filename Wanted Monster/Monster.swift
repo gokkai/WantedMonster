@@ -25,12 +25,18 @@ enum typeMonster: CustomStringConvertible{
     }
     
 }
-let typeArray=["pile","couch","chair","decoration"]
+let typeArray=[typeMonster.pile.description,typeMonster.couch.description,typeMonster.chair.description,typeMonster.decoration.description]
 class Monster{
     let typeOfMonster: typeMonster
     let pictureOfMonster: UIImage
+    var latitudeOfMonster:Double=0
+    var longitudeOfMonster:Double=0
+    var downlodingImageUrl:String=""
+    //let monsterId:String?
+    
     init(typeOfMonster:typeMonster, pictureOfMonster:UIImage) {
         self.typeOfMonster=typeOfMonster
         self.pictureOfMonster=pictureOfMonster
+        
     }
 }
