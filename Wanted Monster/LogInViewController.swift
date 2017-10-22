@@ -16,8 +16,8 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var LogOrSignSegmentedControl: UISegmentedControl!
     
-    @IBAction func logInBtn(_ sender: Any)
-    {
+    @IBAction func LogInButton(_ sender: Any) {
+        
         guard let userMail=mailText.text, let userPassword=passwordText.text else{return}
         if LogOrSignSegmentedControl.selectedSegmentIndex==0 //Log In
         {
@@ -27,7 +27,8 @@ class LogInViewController: UIViewController {
                 {
                     self.presentAlertDialog(withError: error.localizedDescription)
                 }
-                if success{
+                if success
+                {
                     self.tabBarController?.selectedIndex=0
                 }
             }
@@ -35,17 +36,20 @@ class LogInViewController: UIViewController {
         else //Sign In
         {
             //Sign In with the Firebase Manager
-            FirebaseManager.sharedInstance.createANewUser(userName: userMail, password: userPassword){ (succes,error) in
-            if let error = error
-            {
-                self.presentAlertDialog(withError: error.localizedDescription)
-            }
-            if success{
-                self.tabBarController?.selectedIndex=0
+            FirebaseManager.sharedInstance.createANewUser(userName: userMail, password: userPassword)
+            { (succes,error) in
+                if let error = error
+                {
+                    self.presentAlertDialog(withError: error.localizedDescription)
+                }
+                if succes
+                {
+                    self.tabBarController?.selectedIndex=0
+                }
             }
         }
     }
-}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,7 +66,7 @@ class LogInViewController: UIViewController {
             // ... will Show disconnect button when a user is logged in
         
         }
-    }
+    
     
     func presentAlertDialog(withError:String){
         let alertController = UIAlertController(title: "Authentification", message:
@@ -77,4 +81,4 @@ class LogInViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
 
-
+}
