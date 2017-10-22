@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
 
 class DetailsViewController: UIViewController {
     
     @IBOutlet weak var typeOfMonsterLabel: UILabel!
     @IBOutlet weak var monsterImage: UIImageView!
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var adressLabel: UILabel!
+   
     
     var monster: Monster?
     
@@ -23,10 +26,52 @@ class DetailsViewController: UIViewController {
     }
     
     func setUI(){
-        monsterImage.image=monster?.pictureOfMonster
-        typeOfMonsterLabel.text=monster?.typeOfMonster.description
+        monsterImage.setImage(withURLString: monster?.downlodingImageUrl)
+        //monsterImage.image=monster?.pictureOfMonster
+        typeOfMonsterLabel.text=monster?.typeOfMonster.rawValue
+        //let location=LocationServiceController(latitude: monster!.latitudeOfMonster, longitude: monster!.longitudeOfMonster)
+//        var test = monster?.latitudeOfMonster
+//        var test2 = monster?.longitudeOfMonster
+        reverseGeocoding(latitude: monster!.latitudeOfMonster, longitude: monster!.longitudeOfMonster)
+        
         
     }
+    
+    func reverseGeocoding(latitude:Double,longitude:Double)
+    {
+        let location=CLLocation(latitude: latitude, longitude: longitude)
+        CLGeocoder().reverseGeocodeLocation(location){(placemark,error) in
+            if error != nil
+            {
+                print("Oups can reverse coordinate")
+            }
+            else
+            {
+                if let place=placemark?[0]
+                {
+                    if let checker=place.subThoroughfare
+                    {
+                        self.adressLabel.text=("\(place.subThoroughfare!) \(place.thoroughfare!) \n \(place.locality!) \n \(place.country!)")
+                    }
+                }
+            }
+        }
+    }
+    @IBAction func DeleteMonster(_ sender: Any)
+    {
+        FirebaseManager.deleteMonster(monster: monster!)
+        let alertController = UIAlertController(title: "Monster deleted", message:
+            "Thank you for keeping us in the loop", preferredStyle: UIAlertControllerStyle.alert)
+        let addAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        {
+            UIAlertAction in
+            self.tabBarController?.selectedIndex = 0
+        }
+        alertController.addAction(addAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

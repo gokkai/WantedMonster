@@ -8,35 +8,41 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
+import CoreLocation
 
-enum typeMonster: CustomStringConvertible{
-    case pile
-    case couch
-    case chair
-    case decoration
-    
-    var description: String{
-        switch self{
-        case .pile: return "pile"
-        case .couch: return "couch"
-        case .chair: return "chair"
-        case .decoration: return "decoration"
-        }
-    }
-    
+enum TypeMonster: String{
+    case pile = "pile"
+    case couch = "couch"
+    case chair = "chair"
+    case decoration = "decoration"
 }
-let typeArray=[typeMonster.pile.description,typeMonster.couch.description,typeMonster.chair.description,typeMonster.decoration.description]
+
+let typeArray=[TypeMonster.pile,TypeMonster.couch,TypeMonster.chair,TypeMonster.decoration]
 class Monster{
-    let typeOfMonster: typeMonster
-    let pictureOfMonster: UIImage
-    var latitudeOfMonster:Double=0
-    var longitudeOfMonster:Double=0
-    var downlodingImageUrl:String=""
-    //let monsterId:String?
+    var typeOfMonster: TypeMonster
+    var pictureOfMonster: UIImage?
+    var latitudeOfMonster:Double
+    var longitudeOfMonster:Double
+    var downlodingImageUrl: String?
+    var monsterId:String?
     
-    init(typeOfMonster:typeMonster, pictureOfMonster:UIImage) {
+    init(typeOfMonster:TypeMonster, pictureOfMonster:UIImage, latitudeOfMonster:Double,longitudeOfMonster:Double) {
         self.typeOfMonster=typeOfMonster
         self.pictureOfMonster=pictureOfMonster
+        self.latitudeOfMonster=latitudeOfMonster
+        self.longitudeOfMonster=longitudeOfMonster
+        
+        
+    }
+    
+    init?(id: String, json: JSON){
+        guard let typeMonster = TypeMonster(rawValue: json["typeOfMonster"].stringValue) else{return nil}
+        self.typeOfMonster = typeMonster
+        self.latitudeOfMonster = json["latitudeOfMonster"].doubleValue
+        self.longitudeOfMonster = json["longitudeOfMonster"].doubleValue
+        self.downlodingImageUrl = json["downloadingImageUrl"].string
+        self.monsterId = id
         
     }
 }

@@ -9,11 +9,16 @@
 
 import UIKit
 import FirebaseDatabase
+import CoreLocation
 
-class AddViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource, UINavigationControllerDelegate,UIImagePickerControllerDelegate
+class AddViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource, UINavigationControllerDelegate,UIImagePickerControllerDelegate,CLLocationManagerDelegate
 {
-
-    var typeOfMonsterSelected:typeMonster?
+    let manager=CLLocationManager()
+    var latitudeMonster:Double=0
+    var longitudeMonster:Double=0
+    var typeOfMonsterSelected:TypeMonster?
+    var location=CLLocation()
+    
     @IBOutlet weak var monsterImage: UIImageView!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var typePicker: UIPickerView!
@@ -71,19 +76,22 @@ class AddViewController: UIViewController, UIPickerViewDelegate,UIPickerViewData
             self.present(alertController, animated: true, completion: nil)
             return
         }
-            let someMonster=Monster(typeOfMonster: unwrappedTypeOfMonsterSelected, pictureOfMonster: imageMonsterSelected)
+       
+        let someMonster=Monster(typeOfMonster: unwrappedTypeOfMonsterSelected, pictureOfMonster: imageMonsterSelected, latitudeOfMonster: latitudeMonster, longitudeOfMonster: longitudeMonster)
         FirebaseManager.addImageOfMonster(monster:someMonster)
         let alertController = UIAlertController(title: "Monster added", message:
             "Thank you for participating", preferredStyle: UIAlertControllerStyle.alert)
         let addAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
         {
             UIAlertAction in
-            self.tabBarController?.selectedIndex = 0
+            self.tabBarController?.selectedIndex=0
+
+            
         }
         alertController.addAction(addAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    
+  
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     {
         return 1
@@ -91,7 +99,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate,UIPickerViewData
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-        return typeArray[row]
+        return typeArray[row].rawValue
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
@@ -101,30 +109,27 @@ class AddViewController: UIViewController, UIPickerViewDelegate,UIPickerViewData
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        let typeOfMonsterPicked=typeArray[row]
-        switch typeOfMonsterPicked
-        {
-        case "pile":
-            typeOfMonsterSelected = .pile
-        case "chair":
-            typeOfMonsterSelected = .chair
-        case "couch":
-            typeOfMonsterSelected = .couch
-        case "decoration":
-            typeOfMonsterSelected = .decoration
-        default:
-            typeOfMonsterSelected = .decoration
-            
-        }
+        typeOfMonsterSelected = typeArray[row]
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        manager.delegate=self
+        manager.desiredAccuracy=kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
         
       
     }
-
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+     location=locations[0]
+        //let span:MKCoordinateSpan=MKCoordinateSpanMake(0.01,0.01)
+        //let myLocation:CLLocationCoordinate2D=CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        latitudeMonster=location.coordinate.latitude
+        longitudeMonster=location.coordinate.longitude
+        
+    }
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

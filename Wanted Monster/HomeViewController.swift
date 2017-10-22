@@ -9,77 +9,67 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseStorage
+import SwiftyJSON
+
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var homeTableView: UITableView!
-    
     var ref:DatabaseReference?
-    var databaseHandler:DatabaseHandle?
+
     var monsters:[Monster]=[]
-    
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        //monsters=createArray()
         
         homeTableView.delegate=self
         homeTableView.dataSource=self
+
+        self.fetchMonster { (monsters) in
+            print("done")
+            self.monsters = monsters
+            self.homeTableView.reloadData()
+        }
         
-        //Set the firebase reference
-        ref=Database.database().reference()
-        //Retrieve the monsters and listen for change
-        databaseHandler=ref?.child("monster").observe(.childAdded, with: { (snapshot) in
-            if let value = snapshot.value
-            {
-                let response = true
-                let json = JSON(value)
-                print(json)
-                guard let userFistName = json["Firstname"].string, let userLastName = json["Lastname"].string, let userBirthdate = json["Birthdate"].string else {return}
-                self.firstName = userFistName
-                self.lastName = userLastName
-                self.bithDate = userBirthdate
-                let userLocation = json["Location"]
-                self.location = FireBaseManager.getLocationFromJson(userLocation: userLocation)
-                let userGroup = json["Group"]
-                self.group = FireBaseManager.getGroupFromJson(userGroup: userGroup)
-                let userAdress = json["Adress"]
-                self.adress = FireBaseManager.getAdressFromJson(userAdress: userAdress)
-                DispatchQueue.main.async {
-                    handler(response)
+    }
+
+    func fetchMonster(completionHandler: @escaping ([Monster]) -> Void){
+
+        ref = Database.database().reference()
+        ref!.observe(.childAdded) { (snapshot) in
+            var arrayOfMonster = [Monster]()
+            if let value = snapshot.value{
+                 let json = JSON(value)
+                for (key, value) in json.dictionaryValue{
+                    print("Key is \(key) - \(value)")
+                    if let monster = Monster(id: key, json: value){
+                        arrayOfMonster.append(monster)
+                    }
                 }
             }
-        })
+            completionHandler(arrayOfMonster)
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+
+        self.fetchMonster { (monsters) in
+            self.monsters = monsters
+            self.homeTableView.reloadData()
+            
+        }
+        self.homeTableView.setNeedsDisplay()
 
     }
+    
 
-    func createArray() ->[Monster]{
-        var tempMonster:[Monster]=[]
-        
-        
-        let monster1=Monster(typeOfMonster: .chair, pictureOfMonster: #imageLiteral(resourceName: "genaude"))
-        let monster2=Monster(typeOfMonster: .couch, pictureOfMonster: #imageLiteral(resourceName: "cookieMonster"))
-        let monster3=Monster(typeOfMonster: .pile, pictureOfMonster: #imageLiteral(resourceName: "Kraken_v2_by_elmisa-d70nmt4"))
-        let monster4=Monster(typeOfMonster: .decoration, pictureOfMonster:#imageLiteral(resourceName: "cthulhu"))
-        let monster5=Monster(typeOfMonster: .pile, pictureOfMonster: #imageLiteral(resourceName: "spectra"))
-        let monster6=Monster(typeOfMonster: .couch, pictureOfMonster:#imageLiteral(resourceName: "nosferatu"))
-        
-        tempMonster.append(monster1)
-        tempMonster.append(monster2)
-        tempMonster.append(monster3)
-        tempMonster.append(monster4)
-        tempMonster.append(monster5)
-        tempMonster.append(monster6)
-        
-        return tempMonster
-    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "HomeToDetail"{
             let destVC=segue.destination as! DetailsViewController
-            destVC.monster=sender as? Monster
+            destVC.monster = sender as? Monster
+        }
     }
-
-}
 }
 
 extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
@@ -94,8 +84,8 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate{
         let cell=tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
         
         cell.setMonster(monster: monster)
-        
         return cell
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

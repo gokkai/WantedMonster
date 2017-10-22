@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0335551F9C9C300084203F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0335541F9C9C300084203F /* User.swift */; };
+		2C0E730C1F975128009D8943 /* LocationServiceController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E730B1F975128009D8943 /* LocationServiceController .swift */; };
 		2C18CE1E1F841739009C6AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CE1D1F841739009C6AF4 /* AppDelegate.swift */; };
 		2C18CE231F841739009C6AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C18CE211F841739009C6AF4 /* Main.storyboard */; };
 		2C18CE251F841739009C6AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C18CE241F841739009C6AF4 /* Assets.xcassets */; };
@@ -17,12 +19,16 @@
 		2C1DA1FB1F8E625400684B6C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DA1FA1F8E625400684B6C /* LogInViewController.swift */; };
 		2C61FF321F94A15600BCB9AE /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61FF311F94A15600BCB9AE /* FirebaseManager.swift */; };
 		2C61FF331F94D24800BCB9AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CED44C51F8F77E700556840 /* GoogleService-Info.plist */; };
+		2C6AB6691F96341D00BD230A /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6AB6681F96341D00BD230A /* UIImageView+Utils.swift */; };
+		2C6AB66B1F964C0700BD230A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6AB66A1F964C0700BD230A /* CoreLocation.framework */; };
 		2C6D1A711F8B60BC00477EAE /* detailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D1A701F8B60BC00477EAE /* detailsViewController.swift */; };
 		2C95BA9F1F8B7B9B0075CAAF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C95BA9E1F8B7B9B0075CAAF /* AddViewController.swift */; };
 		F51C230F0B0E2C084B4499F2 /* Pods_Wanted_Monster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C29BF807FBDC70181D90F3F /* Pods_Wanted_Monster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0335541F9C9C300084203F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2C0E730B1F975128009D8943 /* LocationServiceController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationServiceController .swift"; sourceTree = "<group>"; };
 		2C18CE1A1F841739009C6AF4 /* Wanted Monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wanted Monster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C18CE1D1F841739009C6AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C18CE221F841739009C6AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +40,8 @@
 		2C18CE4F1F842042009C6AF4 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		2C1DA1FA1F8E625400684B6C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2C61FF311F94A15600BCB9AE /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		2C6AB6681F96341D00BD230A /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		2C6AB66A1F964C0700BD230A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2C6D1A701F8B60BC00477EAE /* detailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsViewController.swift; sourceTree = "<group>"; };
 		2C95BA9E1F8B7B9B0075CAAF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		2CED44C51F8F77E700556840 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6AB66B1F964C0700BD230A /* CoreLocation.framework in Frameworks */,
 				F51C230F0B0E2C084B4499F2 /* Pods_Wanted_Monster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				2C18CE4F1F842042009C6AF4 /* Monster.swift */,
+				2C0335541F9C9C300084203F /* User.swift */,
+				2C6AB6681F96341D00BD230A /* UIImageView+Utils.swift */,
+				2C0E730B1F975128009D8943 /* LocationServiceController .swift */,
 				2C18CE1D1F841739009C6AF4 /* AppDelegate.swift */,
 				2C18CE211F841739009C6AF4 /* Main.storyboard */,
 				2C18CE241F841739009C6AF4 /* Assets.xcassets */,
@@ -85,9 +97,9 @@
 				2C18CE4B1F84193F009C6AF4 /* HomeViewController.swift */,
 				2C18CE4D1F841E25009C6AF4 /* HomeCell.swift */,
 				2C6D1A701F8B60BC00477EAE /* detailsViewController.swift */,
-				2C95BA9E1F8B7B9B0075CAAF /* AddViewController.swift */,
 				2C1DA1FA1F8E625400684B6C /* LogInViewController.swift */,
 				2C61FF311F94A15600BCB9AE /* FirebaseManager.swift */,
+				2C95BA9E1F8B7B9B0075CAAF /* AddViewController.swift */,
 			);
 			path = "Wanted Monster";
 			sourceTree = "<group>";
@@ -104,6 +116,7 @@
 		ED786B86E2F112721B6F40F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C6AB66A1F964C0700BD230A /* CoreLocation.framework */,
 				3C29BF807FBDC70181D90F3F /* Pods_Wanted_Monster.framework */,
 			);
 			name = Frameworks;
@@ -221,16 +234,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Wanted Monster/Pods-Wanted Monster-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -247,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0E730C1F975128009D8943 /* LocationServiceController .swift in Sources */,
 				2C6D1A711F8B60BC00477EAE /* detailsViewController.swift in Sources */,
 				2C18CE501F842042009C6AF4 /* Monster.swift in Sources */,
 				2C95BA9F1F8B7B9B0075CAAF /* AddViewController.swift in Sources */,
@@ -254,7 +274,9 @@
 				2C61FF321F94A15600BCB9AE /* FirebaseManager.swift in Sources */,
 				2C18CE1E1F841739009C6AF4 /* AppDelegate.swift in Sources */,
 				2C18CE4E1F841E25009C6AF4 /* HomeCell.swift in Sources */,
+				2C6AB6691F96341D00BD230A /* UIImageView+Utils.swift in Sources */,
 				2C18CE4C1F84193F009C6AF4 /* HomeViewController.swift in Sources */,
+				2C0335551F9C9C300084203F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

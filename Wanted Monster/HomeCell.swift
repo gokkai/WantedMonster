@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class HomeCell: UITableViewCell {
     @IBOutlet weak var monsterImage: UIImageView!
     @IBOutlet weak var monsterType: UILabel!
     
+    
     func setMonster(monster: Monster){
-        monsterImage.image=monster.pictureOfMonster
-        monsterType.text=monster.typeOfMonster.description
+        
+        monsterImage.setImage(withURLString: monster.downlodingImageUrl)
+        monsterType.text=monster.typeOfMonster.rawValue
     }
     
 
