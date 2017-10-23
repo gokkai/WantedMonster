@@ -27,11 +27,9 @@ class DetailsViewController: UIViewController {
     
     func setUI(){
         monsterImage.setImage(withURLString: monster?.downlodingImageUrl)
-        //monsterImage.image=monster?.pictureOfMonster
+       
         typeOfMonsterLabel.text=monster?.typeOfMonster.rawValue
-        //let location=LocationServiceController(latitude: monster!.latitudeOfMonster, longitude: monster!.longitudeOfMonster)
-//        var test = monster?.latitudeOfMonster
-//        var test2 = monster?.longitudeOfMonster
+
         reverseGeocoding(latitude: monster!.latitudeOfMonster, longitude: monster!.longitudeOfMonster)
         
         
@@ -43,7 +41,7 @@ class DetailsViewController: UIViewController {
         CLGeocoder().reverseGeocodeLocation(location){(placemark,error) in
             if error != nil
             {
-                print("Oups can reverse coordinate")
+                print("Oups can't reverse coordinate")
             }
             else
             {
@@ -65,7 +63,8 @@ class DetailsViewController: UIViewController {
         let addAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
         {
             UIAlertAction in
-            self.tabBarController?.selectedIndex = 0
+            //self.tabBarController?.selectedIndex = 0
+            self.navigationController?.popToRootViewController(animated: true)
         }
         alertController.addAction(addAction)
         self.present(alertController, animated: true, completion: nil)

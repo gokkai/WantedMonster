@@ -38,27 +38,38 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gUv-IV-ZNK">
                                                     <rect key="frame" x="8" y="8" width="187.5" height="103"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="typeMonster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P1H-qZ-f48">
-                                                    <rect key="frame" x="199.5" y="16" width="163.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cZC-tr-JOm">
+                                                    <rect key="frame" x="199.5" y="16" width="163.5" height="68"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="typeMonster" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P1H-qZ-f48">
+                                                            <rect key="frame" x="0.0" y="0.0" width="163.5" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="ftL-uz-V78"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posal Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="aXH-D3-Hp2">
+                                                            <rect key="frame" x="0.0" y="38" width="163.5" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="h2U-ih-vCk"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="P1H-qZ-f48" firstAttribute="leading" secondItem="gUv-IV-ZNK" secondAttribute="trailing" constant="4" id="7UL-lP-Gja"/>
+                                                <constraint firstItem="cZC-tr-JOm" firstAttribute="leading" secondItem="gUv-IV-ZNK" secondAttribute="trailing" constant="4" id="3aq-r9-yB6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cZC-tr-JOm" secondAttribute="trailing" constant="4" id="4Wj-8W-fnP"/>
                                                 <constraint firstItem="gUv-IV-ZNK" firstAttribute="top" secondItem="ao1-R4-Vjp" secondAttribute="top" constant="8" id="Rw1-gj-Quq"/>
                                                 <constraint firstItem="gUv-IV-ZNK" firstAttribute="centerY" secondItem="ao1-R4-Vjp" secondAttribute="centerY" id="WNK-yN-qPC"/>
                                                 <constraint firstItem="gUv-IV-ZNK" firstAttribute="leading" secondItem="ao1-R4-Vjp" secondAttribute="leadingMargin" id="X7x-2A-1Ig"/>
-                                                <constraint firstItem="P1H-qZ-f48" firstAttribute="top" secondItem="ao1-R4-Vjp" secondAttribute="top" constant="16" id="asQ-Qg-LIe"/>
-                                                <constraint firstAttribute="trailing" secondItem="P1H-qZ-f48" secondAttribute="trailing" constant="12" id="b6U-Re-FCk"/>
-                                                <constraint firstItem="P1H-qZ-f48" firstAttribute="leading" secondItem="gUv-IV-ZNK" secondAttribute="trailing" constant="12" id="rMg-Uj-2lM"/>
+                                                <constraint firstItem="cZC-tr-JOm" firstAttribute="top" secondItem="ao1-R4-Vjp" secondAttribute="topMargin" constant="8" id="psX-42-IEb"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="rMg-Uj-2lM"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.67843137249999996" green="0.81960784310000001" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -74,6 +85,7 @@
                                         </variation>
                                         <connections>
                                             <outlet property="monsterImage" destination="gUv-IV-ZNK" id="QYy-lk-Cq2"/>
+                                            <outlet property="monsterPostalCode" destination="aXH-D3-Hp2" id="Csr-sn-nqX"/>
                                             <outlet property="monsterType" destination="P1H-qZ-f48" id="YA4-RT-DM0"/>
                                         </connections>
                                     </tableViewCell>
